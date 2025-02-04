@@ -161,7 +161,6 @@ class PRCodeSuggestions:
 
                     # publish the PR comment
                     if get_settings().pr_code_suggestions.persistent_comment: # true by default
-                        pr_body += "@openhands-agent, take a look"
                         self.publish_persistent_comment_with_history(self.git_provider,
                                                                      pr_body,
                                                                      initial_header="## PR Code Suggestions ✨",
@@ -810,6 +809,7 @@ class PRCodeSuggestions:
                 # pr_body += "</details>"
                 # pr_body += """</td></tr>"""
             pr_body += """</tr></tbody></table>"""
+            pr_body += "@openhands-agent, take a look."
             return pr_body
         except Exception as e:
             get_logger().info(f"Failed to publish summarized code suggestions, error: {e}")
