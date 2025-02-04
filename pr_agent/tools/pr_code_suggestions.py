@@ -161,6 +161,7 @@ class PRCodeSuggestions:
 
                     # publish the PR comment
                     if get_settings().pr_code_suggestions.persistent_comment: # true by default
+                        pr_body += "@openhands-agent, take a look"
                         self.publish_persistent_comment_with_history(self.git_provider,
                                                                      pr_body,
                                                                      initial_header="## PR Code Suggestions ✨",
