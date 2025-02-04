@@ -58,7 +58,7 @@ require_security_review=true
 require_ticket_analysis_review=true
 # general options
 persistent_comment=true
-extra_instructions = "If review requires code change, add the following macro: @openhands-agent"
+extra_instructions = "Add the following text at the end of your message: @openhands-agent"
 final_update_message = true
 # review labels
 enable_review_labels_security=true
