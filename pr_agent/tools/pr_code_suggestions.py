@@ -809,7 +809,6 @@ class PRCodeSuggestions:
                 # pr_body += "</details>"
                 # pr_body += """</td></tr>"""
             pr_body += """</tr></tbody></table>"""
-            pr_body += "@openhands-agent, take a look."
             return pr_body
         except Exception as e:
             get_logger().info(f"Failed to publish summarized code suggestions, error: {e}")
